@@ -6,7 +6,7 @@ class ReviewRequest(BaseModel):
     review_text: str = Field(
         ..., 
         description="분석할 고객 리뷰 텍스트", min_length=1, max_length=5000, 
-        examples="배송이 너무 느려요. 제품은 괜찮았지만 배송이 정말 실망스러웠습니다."
+        examples=["배송이 너무 느려요. 제품은 괜찮았지만 배송이 정말 실망스러웠습니다."]
     )
 
 

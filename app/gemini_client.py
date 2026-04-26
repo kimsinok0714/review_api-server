@@ -46,7 +46,7 @@ class ReviewAnalyzer:
         
         # Gemini API에 콘텐츠 생성 요청을 보내는 핵심 코드입니다.
         response = self.client.models.generate_content(
-            model = self.model,
+            model = "gemini-2.5-flash",
             contents = prompt,
             config = types.GenerateContentConfig( # 응답 형식 설정
                 response_mime_type="application/json",

@@ -6,7 +6,6 @@ from app.schemas import ReviewRequest, ReviewResponse
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
 
-
 logger = logging.getLogger(__name__)
 
 env_path = Path(__file__).resolve().parent.parent / ".env"
@@ -16,7 +15,6 @@ load_dotenv(dotenv_path=env_path, override=False)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-
     try:
         app.state.analyzer = ReviewAnalyzer()
         logger.info("고객 리뷰 분석기 초기화 완료")
